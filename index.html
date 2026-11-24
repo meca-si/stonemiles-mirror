@@ -453,6 +453,12 @@
   .priv-tag{ font-size:10px; font-weight:800; letter-spacing:.06em; color:var(--accent); border:1px solid var(--accent); border-radius:999px; padding:2px 7px; white-space:nowrap; flex:none; }
   .cat-tag{ font-size:10px; font-weight:800; letter-spacing:.06em; color:var(--neon-a); border:1px solid var(--neon-a); border-radius:999px; padding:2px 7px; white-space:nowrap; }
   :root[data-theme="light"] .cat-tag{ color:#0b7668; border-color:#0b7668; }
+  /* ---------- Maintenance sheet fields + fleet maintenance filter (preview) ---------- */
+  .kind-tag{ font-size:10px; font-weight:800; letter-spacing:.06em; border-radius:999px; padding:2px 7px; white-space:nowrap; }
+  .kind-tag.sched{ color:var(--neon-a); border:1px solid var(--neon-a); }
+  :root[data-theme="light"] .kind-tag.sched{ color:#0b7668; border-color:#0b7668; }
+  .kind-tag.repair{ color:var(--accent); border:1px solid var(--accent); }
+  .fm-filter .chipbtn.on{ background:linear-gradient(92deg,var(--neon-a),var(--neon-b)); color:#04150c; border-color:transparent; }
   /* ---------- Android Auto & Cab Mode (preview) ---------- */
   .aa-frame{ background:#0b0f12; border:1px solid #2b3236; border-radius:18px; padding:14px 16px; color:#eef0ea; box-shadow:var(--glass-shadow); }
   .aa-frame + .aa-frame{ margin-top:10px; }
@@ -756,9 +762,11 @@
       <h2 class="sec">What's new in this preview</h2>
       <div class="card" style="border-color:var(--neon-a);padding-top:12px">
         <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><strong>Updated to the latest approved build</strong><span class="stage-tag">PREVIEW · SAMPLE ONLY</span></div>
-        <p class="small dim" style="margin-top:6px;line-height:1.55">Now mirrors the newest approved builds — the simplified navigation (one Library for every record, one Desk with a role switcher, Loads on a single My Loads / Tracker / Boards switch, Money as one tab), the new Tax Worksheet in the Library, auto-add stops on planned routes — the planner's fuel, 30-minute break, and 10-hour rest picks land on the route as waypoints, announced on the route with one-tap Remove, with an opt-out switch in Settings → Driving (on by default) — and this: the Worth-It Advisor and True Rate now deduct <strong style="color:var(--text)">your own factoring % and dispatcher %</strong> from a load's gross pay before judging it. The Advisor judges a load after your own factoring and dispatcher cuts are taken out, with the math shown line by line — fake RUGGS data only. Also new in this pass: the receiver signature pad (type the name or draw it — a drawn signature prints on the signed POD, and the sealed record notes how they signed), Money sectioned behind a sticky bar with the More directory folded into counted groups, one search box for your loads, drivers &amp; paperwork, suggested next loads on the fleet board with their reasons printed leg by leg, and a paperwork door on every load — a broker drops the rate con, BOL, or POD straight into the load, no account. Also in this pass: pre-trip and post-trip inspections beside the HOS clocks on Drive — the pre-trip opens on its own at the first On Duty of the day — and a one-tap duty remark on every status change, stamped with city, state, and time on every log entry. Also in this pass: the <strong style="color:var(--text)">regulatory audit fixes</strong> — the 70/8 or 60/7 cycle choice on the clocks card, split-sleeper done right, certified daily logs, the DOT packet with Email + PDF beside it, the 13-item inspection checklist with named repair certification, remarks that open the checklist, and a tightened qualification file. Also in this pass: <strong style="color:var(--text)">duty status now runs the federal pattern</strong> — stopped 5 minutes in Driving and the app asks what you're doing, with task-note picks (Fueling seals On Duty with the confirmed reason — fueling is On Duty time by law); no answer in 1 minute and On Duty seals on its own, stamped AUTO DEFAULT; Off Duty and Sleeper Berth are never automatic. And <strong style="color:var(--text)">owner log corrections now wait on the driver</strong> — a fleet owner's correction sits PENDING, the driver's original record stands, and it only applies when the driver acknowledges it; a dispute keeps the original and prints on the DOT packet. Nothing here is live or saved.</p>
+        <p class="small dim" style="margin-top:6px;line-height:1.55">Now mirrors the newest approved builds — the simplified navigation (one Library for every record, one Desk with a role switcher, Loads on a single My Loads / Tracker / Boards switch, Money as one tab), the new Tax Worksheet in the Library, auto-add stops on planned routes — the planner's fuel, 30-minute break, and 10-hour rest picks land on the route as waypoints, announced on the route with one-tap Remove, with an opt-out switch in Settings → Driving (on by default) — and this: the Worth-It Advisor and True Rate now deduct <strong style="color:var(--text)">your own factoring % and dispatcher %</strong> from a load's gross pay before judging it. The Advisor judges a load after your own factoring and dispatcher cuts are taken out, with the math shown line by line — fake RUGGS data only. Also new in this pass: the receiver signature pad (type the name or draw it — a drawn signature prints on the signed POD, and the sealed record notes how they signed), Money sectioned behind a sticky bar with the More directory folded into counted groups, one search box for your loads, drivers &amp; paperwork, suggested next loads on the fleet board with their reasons printed leg by leg, and a paperwork door on every load — a broker drops the rate con, BOL, or POD straight into the load, no account. Also in this pass: pre-trip and post-trip inspections beside the HOS clocks on Drive — the pre-trip opens on its own at the first On Duty of the day — and a one-tap duty remark on every status change, stamped with city, state, and time on every log entry. Also in this pass: the <strong style="color:var(--text)">regulatory audit fixes</strong> — the 70/8 or 60/7 cycle choice on the clocks card, split-sleeper done right, certified daily logs, the DOT packet with Email + PDF beside it, the 13-item inspection checklist with named repair certification, remarks that open the checklist, and a tightened qualification file. Also in this pass: <strong style="color:var(--text)">duty status now runs the federal pattern</strong> — stopped 5 minutes in Driving and the app asks what you're doing, with task-note picks (Fueling seals On Duty with the confirmed reason — fueling is On Duty time by law); no answer in 1 minute and On Duty seals on its own, stamped AUTO DEFAULT; Off Duty and Sleeper Berth are never automatic. And <strong style="color:var(--text)">owner log corrections now wait on the driver</strong> — a fleet owner's correction sits PENDING, the driver's original record stands, and it only applies when the driver acknowledges it; a dispute keeps the original and prints on the DOT packet. <strong style="color:var(--text)">New today (Nov 24): Motive and Samsara live sync shipped, joining Geotab — all three ELD connections are live</strong> — Geotab connects with a MyGeotab login (server, database, username, password — Geotab has no token page; the login is the credential, checked with Geotab before saving); Motive and Samsara connect with an API token from their dashboards. On any of the three, Sync now pulls HOS logs &amp; clocks, odometer, engine hours, inspections, and IFTA miles for your own truck, matched by VIN. <strong style="color:var(--text)">And the Fuel Cost Calculator is in the Fuel workspace</strong> beside the fuel log (Money → Records): trip distance, deadhead, MPG, and price, an optional load picker that prefills the miles, and live results — gallons needed, total fuel cost, cost per mile, plus the fuel's share of the load's pay and what's left after fuel — an estimate for planning; the fuel log stays the record. Nothing here is live or saved.</p>
         <p class="small" style="margin-top:8px;line-height:1.55"><strong style="color:var(--text)">📈 Rate Watch — Week 45 market benchmarks + the Stonervision Rate Index, priced from real sealed loads (RGN and oversized buckets included).</strong></p>
         <div class="tool-chips tight">
+          <button class="chipbtn" data-more-anchor="eldHub">🛰️ Geotab ELD — live sync</button>
+          <button class="chipbtn" data-ws-money="records">⛽ Fuel Cost Calculator</button>
           <button class="chipbtn" data-goto-desk>🖥️ Desk — one entry, every role</button>
           <button class="chipbtn" data-goto-loads="boards">🚪 Boards + both broker doors</button>
           <button class="chipbtn" data-goto="money">🗄️ Library</button>
@@ -3139,25 +3147,6 @@
         <p class="xs dim" style="margin-top:8px">Sample entries from the October demo run. Load #1037's settlement landed $115.00 short — that's tracked in Who Owes Me and the Settlement Checker, not by quietly editing the lane.</p>
       </div>
 
-      <h2 class="sec">Quarterly Tax — 1099 lane (sample)</h2>
-      <div class="card">
-        <p class="small dim" style="line-height:1.55">Nobody withholds tax from 1099 pay — the IRS collects it in <strong style="color:var(--text)">four payments a year</strong>, over its own periods (the second is only Apr–May). In the full app this card sits in the Pay Book under the Year-to-Date pies and adds up the driver's own 1099 lane by those periods, each netting exactly like the 1099 packet. Sample year for <strong style="color:var(--text)">Demo Driver — D. Carter (fake)</strong>, income-tax half figured at a 12% guess:</p>
-        <div class="xs" style="font-weight:800;letter-spacing:.08em;margin:14px 0 4px">Q1 · JAN – MAR — DUE APR 15, 2026</div>
-        <div class="kv-row"><span class="k">Gross $18,240.00 − stub deductions $3,912.40 − expenses $1,486.20 − fuel $2,940.00</span><span class="v tnum">Net $9,901.40</span></div>
-        <div class="kv-row"><span class="k">SE tax est. $1,399.02 · income tax est. $1,188.17</span><span class="v tnum"><strong style="color:var(--text)">Set aside $2,587.19</strong></span></div>
-        <div class="xs" style="font-weight:800;letter-spacing:.08em;margin:14px 0 4px">Q2 · APR – MAY — DUE JUN 15, 2026</div>
-        <div class="kv-row"><span class="k">Gross $12,480.00 − stub deductions $2,604.00 − expenses $940.60 − fuel $1,985.00</span><span class="v tnum">Net $6,950.40</span></div>
-        <div class="kv-row"><span class="k">SE tax est. $982.06 · income tax est. $834.05</span><span class="v tnum"><strong style="color:var(--text)">Set aside $1,816.11</strong></span></div>
-        <div class="xs" style="font-weight:800;letter-spacing:.08em;margin:14px 0 4px">Q3 · JUN – AUG — DUE SEP 15, 2026</div>
-        <div class="kv-row"><span class="k">Gross $19,860.00 − stub deductions $4,215.30 − expenses $1,702.45 − fuel $3,110.00</span><span class="v tnum">Net $10,832.25</span></div>
-        <div class="kv-row"><span class="k">SE tax est. $1,530.55 · income tax est. $1,299.87</span><span class="v tnum"><strong style="color:var(--text)">Set aside $2,830.42</strong></span></div>
-        <div class="xs" style="font-weight:800;letter-spacing:.08em;margin:14px 0 4px">Q4 · SEP – DEC — DUE JAN 15, 2027</div>
-        <div class="kv-row"><span class="k">Gross $9,340.00 − stub deductions $1,986.20 − expenses $812.30 − fuel $1,470.00</span><span class="v tnum">Net $5,071.50</span></div>
-        <div class="kv-row"><span class="k">SE tax est. $716.58 · income tax est. $608.58</span><span class="v tnum"><strong style="color:var(--text)">Set aside $1,325.16</strong></span></div>
-        <div class="kv-row" style="margin-top:8px"><span class="k"><strong style="color:var(--text)">2026 set-aside estimate</strong> — on $32,755.55 net 1099 (gross $59,920.00)</span><span class="v tnum">$8,558.88</span></div>
-        <p class="xs dim" style="margin-top:8px;line-height:1.5">Sample figures from the same made-up demo year — in the full app the card builds itself from the driver's own logged pay, expenses and fuel. Self-employment tax is figured at the full 15.3% on 92.35% of net, before the Social Security wage cap, so the estimate errs on the safe side. W-2 pay never enters — its tax is withheld already — and per diem stays out, being non-taxable. A planning estimate, not tax advice.</p>
-      </div>
-
       
 
       <h2 class="sec">Settlement Checker (sample)</h2>
@@ -3465,56 +3454,76 @@
           <span class="stage-tag">PREVIEW · SAMPLE ONLY</span>
         </div>
         <p class="small dim" style="margin-top:8px;line-height:1.55">Sits right beside the Maintenance Countdown above — the countdown still runs from sealed miles (<strong style="color:var(--text)">PM service due in 4,120 mi, sample</strong>), and this log is the history behind it: every job, what it cost, and the paperwork to prove it. Entries list newest first.</p>
+        <p class="small dim" style="margin-top:6px;line-height:1.55"><strong style="color:var(--text)">New:</strong> every entry now carries a <strong style="color:var(--text)">kind</strong> — <strong style="color:var(--text)">Scheduled service</strong> for planned service / PM work, <strong style="color:var(--text)">Repair</strong> for an unscheduled fix that came up — plus the <strong style="color:var(--text)">parts used, by name and part number</strong>, the <strong style="color:var(--text)">oil brand and weight</strong> on an oil change, and its own <strong style="color:var(--text)">Maintenance sheet (PDF)</strong>: one clean page with the truck's unit, VIN, and plate over the date, odometer, work done, parts, who performed it, and cost — made to send a carrier.</p>
 
         <div class="log-row" style="margin-top:12px;border:1.5px dashed var(--accent)">
-          <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Nov 14, 2026 — Exhaust aftertreatment (SCR) service — work order</strong><span class="status-off">DRAFT · AUTO-DRAFTED FROM FAULT CODE</span></div>
+          <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Nov 14, 2026 — Exhaust aftertreatment (SCR) service — work order</strong><span style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span class="kind-tag repair">REPAIR</span><span class="status-off">DRAFT · AUTO-DRAFTED FROM FAULT CODE</span></span></div>
           <div class="small dim" style="margin-top:2px">Drafted automatically from fault code SPN 4364 · FMI 18 (see Predictive maintenance, right below this log) — check the SCR / DEF system, NOx sensors, and dosing; the code and the truck's readings carried over (all sample).</div>
+          <div class="small dim" style="margin-top:2px">Kind: <strong style="color:var(--text)">Repair</strong> — an unscheduled fix that came up · Parts: — (none yet — the work isn't booked)</div>
           <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline;margin-top:4px"><span class="small dim">Status: DRAFT — a human confirms it before any work is booked</span><span class="small dim">Cost: — (not priced yet)</span></div>
+          <div class="export-bar" role="group" aria-label="Download the maintenance sheet for the SCR work order draft">
+            <button class="export-btn" data-act="download" data-doc="maint-sheet-scr">⬇ Maintenance sheet (PDF, sample)</button>
+          </div>
         </div>
 
         <div class="log-row" style="border:1.5px dashed var(--accent)">
-          <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Oct 22, 2026 — Trailer marker light — diagnose &amp; repair</strong><span class="status-off">DRAFT · AUTO-CREATED FROM DVIR</span></div>
+          <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Oct 22, 2026 — Trailer marker light — diagnose &amp; repair</strong><span style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span class="kind-tag repair">REPAIR</span><span class="status-off">DRAFT · AUTO-CREATED FROM DVIR</span></span></div>
           <div class="small dim" style="margin-top:2px">Drafted automatically when the defect was flagged on today's DVIR — right-rear trailer marker light out; driver note and defect photo carried over from the inspection (all sample).</div>
+          <div class="small dim" style="margin-top:2px">Kind: <strong style="color:var(--text)">Repair</strong> — an unscheduled fix that came up · Parts: — (none yet — diagnosis comes first)</div>
           <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline;margin-top:4px"><span class="small dim">Status: OPEN — the defect stays on top of the next inspection until this entry is marked closed</span><span class="small dim">Cost: — (not priced yet)</span></div>
+          <div class="export-bar" role="group" aria-label="Download the maintenance sheet for the trailer marker light draft">
+            <button class="export-btn" data-act="download" data-doc="maint-sheet-marker">⬇ Maintenance sheet (PDF, sample)</button>
+          </div>
         </div>
 
         <div class="log-row">
-          <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Oct 18, 2026 — Oil &amp; filters</strong><span class="cat-tag">OIL</span></div>
+          <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Oct 18, 2026 — Oil &amp; filters</strong><span style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span class="kind-tag sched">SCHEDULED SERVICE</span><span class="cat-tag">OIL</span></span></div>
           <div class="small dim" style="margin-top:2px">612,340 mi · Full-service oil &amp; filter change, lube, fluid top-off · Shop: Sample Truck Care — Highway Shop (fake)</div>
+          <div class="small dim" style="margin-top:2px">Kind: <strong style="color:var(--text)">Scheduled service</strong> — planned PM work · Oil: <strong style="color:var(--text)">Shell Rotella T5 10W-30</strong> (sample) · 11 gal</div>
+          <div class="small dim" style="margin-top:2px">Parts used (sample): Engine oil filter — <span class="tnum">Fleetguard LF14000NN</span> · Fuel filter — <span class="tnum">Fleetguard FF5776</span></div>
           <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline;margin-top:4px"><span class="small dim">Next due: 637,340 mi · Notes: sample entry</span><span class="cond tnum" style="font-weight:700;font-size:var(--fs-lg)">$486.50</span></div>
           <div class="small" style="margin-top:6px">📎 Receipts &amp; paperwork:</div>
           <div class="export-bar" role="group" aria-label="Download attachments for the oil and filters entry">
+            <button class="export-btn main" data-act="download" data-doc="maint-sheet-oil">⬇ Maintenance sheet (PDF, sample)</button>
             <button class="export-btn" data-act="download" data-doc="maint-receipt-oil">⬇ Receipt — oil service (PDF, sample)</button>
             <button class="export-btn" data-act="download" data-doc="maint-receipt-oil">⬇ Invoice photo (sample)</button>
           </div>
         </div>
 
         <div class="log-row">
-          <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Oct 2, 2026 — Drive tire replaced</strong><span class="cat-tag">TIRES</span></div>
+          <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Oct 2, 2026 — Drive tire replaced</strong><span style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span class="kind-tag repair">REPAIR</span><span class="cat-tag">TIRES</span></span></div>
           <div class="small dim" style="margin-top:2px">608,120 mi · Left inner drive tire replaced — the tire flagged on the DVIR · Shop: Sample Tire Shop (fake)</div>
+          <div class="small dim" style="margin-top:2px">Kind: <strong style="color:var(--text)">Repair</strong> — an unscheduled fix that came up</div>
+          <div class="small dim" style="margin-top:2px">Parts used (sample): Drive tire 11R22.5 — <span class="tnum">Michelin X Line Energy D · MPN 74903</span> · Valve stem — <span class="tnum">TR572 (sample part no.)</span></div>
           <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline;margin-top:4px"><span class="small dim">Notes: closes the DVIR flag (sample)</span><span class="cond tnum" style="font-weight:700;font-size:var(--fs-lg)">$212.40</span></div>
           <div class="small" style="margin-top:6px">📎 Receipts &amp; paperwork:</div>
           <div class="export-bar" role="group" aria-label="Download attachments for the tires entry">
+            <button class="export-btn main" data-act="download" data-doc="maint-sheet-tires">⬇ Maintenance sheet (PDF, sample)</button>
             <button class="export-btn" data-act="download" data-doc="maint-receipt-tires">⬇ Receipt — tire (sample)</button>
           </div>
         </div>
 
         <div class="log-row">
-          <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Sep 19, 2026 — Brake service</strong><span class="cat-tag">BRAKES</span></div>
+          <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Sep 19, 2026 — Brake service</strong><span style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span class="kind-tag sched">SCHEDULED SERVICE</span><span class="cat-tag">BRAKES</span></span></div>
           <div class="small dim" style="margin-top:2px">601,450 mi · Drive-axle brake pads, drums inspected, slack adjusters checked · Shop: Sample Brake &amp; Truck Repair (fake)</div>
+          <div class="small dim" style="margin-top:2px">Kind: <strong style="color:var(--text)">Scheduled service</strong> — planned PM work</div>
+          <div class="small dim" style="margin-top:2px">Parts used (sample): Brake shoe kit, drive axle — <span class="tnum">Meritor Q Plus 4707 · R801079 (sample part no.)</span> · Automatic slack adjuster — <span class="tnum">Haldex S-ABA · 40926023 (sample part no.)</span></div>
           <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline;margin-top:4px"><span class="small dim">Next due: inspect at 626,450 mi</span><span class="cond tnum" style="font-weight:700;font-size:var(--fs-lg)">$385.00</span></div>
           <div class="small" style="margin-top:6px">📎 Receipts &amp; paperwork:</div>
           <div class="export-bar" role="group" aria-label="Download attachments for the brakes entry">
+            <button class="export-btn main" data-act="download" data-doc="maint-sheet-brakes">⬇ Maintenance sheet (PDF, sample)</button>
             <button class="export-btn" data-act="download" data-doc="maint-receipt-brakes">⬇ Work order (PDF, sample)</button>
           </div>
         </div>
 
         <div class="log-row">
-          <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Aug 28, 2026 — Annual DOT inspection</strong><span class="cat-tag">DOT INSPECTION</span></div>
+          <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Aug 28, 2026 — Annual DOT inspection</strong><span style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span class="kind-tag sched">SCHEDULED SERVICE</span><span class="cat-tag">DOT INSPECTION</span></span></div>
           <div class="small dim" style="margin-top:2px">594,200 mi · Annual inspection — passed, sticker applied · Shop: Sample Inspection Station (fake)</div>
+          <div class="small dim" style="margin-top:2px">Kind: <strong style="color:var(--text)">Scheduled service</strong> — planned PM work · Parts used: none — inspection only</div>
           <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline;margin-top:4px"><span class="small dim">Next due: Aug 28, 2027</span><span class="cond tnum" style="font-weight:700;font-size:var(--fs-lg)">$175.00</span></div>
           <div class="small" style="margin-top:6px">📎 Receipts &amp; paperwork:</div>
           <div class="export-bar" role="group" aria-label="Download attachments for the DOT inspection entry">
+            <button class="export-btn main" data-act="download" data-doc="maint-sheet-dot">⬇ Maintenance sheet (PDF, sample)</button>
             <button class="export-btn" data-act="download" data-doc="maint-receipt-dot">⬇ Inspection report (PDF, sample)</button>
           </div>
         </div>
@@ -3523,7 +3532,7 @@
           <span class="small dim">Running total — 4 priced sample entries, newest first (the two open drafts above carry no cost until their work closes)</span>
           <span class="cond" style="font-size:26px;font-weight:700">Total <span class="neon-text tnum">$1,258.90</span></span>
         </div>
-        <p class="xs dim" style="margin-top:6px;line-height:1.5">Categories in the full app: oil, tires, brakes, DOT inspection, engine, transmission, suspension, electrical, A/C, and other — each entry carries date, odometer, description, shop / vendor, cost, optional next-due miles or date, and notes, with receipt / paperwork attachments on the entry, each one downloadable on its own.</p>
+        <p class="xs dim" style="margin-top:6px;line-height:1.5">Categories in the full app: oil, tires, brakes, DOT inspection, engine, transmission, suspension, electrical, A/C, and other — each entry carries date, odometer, description, shop / vendor, cost, optional next-due miles or date, and notes, with receipt / paperwork attachments on the entry, each one downloadable on its own. Each entry also carries its kind (scheduled service or repair), the parts used with part numbers, the oil brand and weight on an oil change, and a per-entry Maintenance sheet (PDF) built from that entry alone.</p>
 
         <div class="xs" style="font-weight:800;letter-spacing:.08em;margin:16px 0 4px">TRUCK RECORD — ONE FILE</div>
         <p class="small dim" style="line-height:1.55">One download with the truck identity + specs at the head of the sheet and the full maintenance log under it — the record you hand a shop, a buyer, or your bookkeeper.</p>
@@ -3532,6 +3541,72 @@
           <button class="export-btn" data-act="print" data-doc="truck-record">📄 View clean copy</button>
         </div>
         <p class="xs dim" style="margin-top:8px">Preview: the download is a real CSV of the sample record above, generated on this screen — VIN and plate stay masked in this preview, as they do everywhere here except the owner's own Settings and record in the full app. Nothing uploads or saves.</p>
+      </div>
+
+      <h2 class="sec">Fleet maintenance — owner / dispatch (sample)</h2>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start;flex-wrap:wrap">
+          <div><strong style="font-size:var(--fs-lg)">🏢 Fleet maintenance — every truck, one list</strong><div class="xs dim" style="margin-top:2px">The owner / dispatch side of the same log — RUGGS LOGISTICS demo fleet (fake)</div></div>
+          <span class="stage-tag">PREVIEW · SAMPLE ONLY</span>
+        </div>
+        <div class="fake-banner" style="margin-top:10px">
+          <span aria-hidden="true">⚠️</span>
+          <p class="xs" style="line-height:1.45"><strong>Fake preview records.</strong> Every truck, entry, part number, and cost below is made-up sample data for the fake RUGGS LOGISTICS demo fleet — the same Maintenance Sheets the drivers see on their own trucks, rolled up for the owner and dispatch. Nothing here is real, and nothing saves or sends.</p>
+        </div>
+        <p class="small dim" style="margin-top:8px;line-height:1.55">Each truck's sealed maintenance log feeds this board — kind, parts, and cost included — and any entry's Maintenance sheet (PDF) downloads from here too, the same one clean page the driver sends a carrier. Filter by truck:</p>
+        <div class="tool-chips fm-filter" role="group" aria-label="Filter fleet maintenance records by truck" style="margin-top:10px">
+          <button class="chipbtn on" data-fm-filter="all">All trucks</button>
+          <button class="chipbtn" data-fm-filter="12">Unit 12</button>
+          <button class="chipbtn" data-fm-filter="R-101">Unit R-101</button>
+          <button class="chipbtn" data-fm-filter="R-102">Unit R-102</button>
+          <button class="chipbtn" data-fm-filter="R-103">Unit R-103</button>
+        </div>
+        <p class="xs dim" id="fmCount" style="margin-top:8px">Showing 6 of 6 sample records — all trucks.</p>
+
+        <div style="margin-top:10px">
+          <div class="log-row" data-fm-unit="R-101">
+            <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Nov 20, 2026 — Alternator replaced</strong><span style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span class="kind-tag repair">REPAIR</span><span class="unit-tag">UNIT R-101</span></span></div>
+            <div class="small dim" style="margin-top:2px">2022 Freightliner Cascadia (fake) · Driver: D. Carter (fake) · 388,410 mi · Charging fault on the road — alternator swapped at a roadside shop · Shop: Sample Roadside Repair (fake)</div>
+            <div class="small dim" style="margin-top:2px">Parts used (sample): Alternator 200A — <span class="tnum">Delco Remy 8600837 (sample part no.)</span> · Serpentine belt — <span class="tnum">Gates K080780 (sample part no.)</span></div>
+            <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap;margin-top:6px"><span class="cond tnum" style="font-weight:700;font-size:var(--fs-lg)">$612.75</span><button class="export-btn" style="flex:0 1 auto;padding:8px 12px" data-act="download" data-doc="maint-sheet-r101-alt">⬇ Maintenance sheet (PDF, sample)</button></div>
+          </div>
+
+          <div class="log-row" data-fm-unit="R-102">
+            <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Nov 12, 2026 — PM service — oil &amp; filters</strong><span style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span class="kind-tag sched">SCHEDULED SERVICE</span><span class="unit-tag">UNIT R-102</span></span></div>
+            <div class="small dim" style="margin-top:2px">2020 Peterbilt 389 (fake) · Driver: M. Alvarez (fake) · 502,775 mi · Full PM — oil &amp; filters, lube, inspection · Shop: Sample Truck Care — Highway Shop (fake)</div>
+            <div class="small dim" style="margin-top:2px">Oil: <strong style="color:var(--text)">Mobil Delvac 1300 Super 15W-40</strong> (sample) · 11 gal · Parts used (sample): Engine oil filter — <span class="tnum">Fleetguard LF14000NN</span> · Fuel filter — <span class="tnum">Fleetguard FF5776</span></div>
+            <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap;margin-top:6px"><span class="cond tnum" style="font-weight:700;font-size:var(--fs-lg)">$438.20</span><button class="export-btn" style="flex:0 1 auto;padding:8px 12px" data-act="download" data-doc="maint-sheet-r102-pm">⬇ Maintenance sheet (PDF, sample)</button></div>
+          </div>
+
+          <div class="log-row" data-fm-unit="R-103">
+            <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Nov 5, 2026 — Air dryer cartridge + brake chamber</strong><span style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span class="kind-tag repair">REPAIR</span><span class="unit-tag">UNIT R-103</span></span></div>
+            <div class="small dim" style="margin-top:2px">2019 Kenworth T680 (fake) · Driver: J. Thompson (fake) · 441,930 mi · Air leak traced to the dryer cartridge; one leaking brake chamber replaced · Shop: Sample Brake &amp; Truck Repair (fake)</div>
+            <div class="small dim" style="margin-top:2px">Parts used (sample): Air dryer cartridge — <span class="tnum">Bendix 109994 (sample part no.)</span> · Brake chamber, type 30 — <span class="tnum">Haldex GC3030 (sample part no.)</span></div>
+            <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap;margin-top:6px"><span class="cond tnum" style="font-weight:700;font-size:var(--fs-lg)">$289.60</span><button class="export-btn" style="flex:0 1 auto;padding:8px 12px" data-act="download" data-doc="maint-sheet-r103-air">⬇ Maintenance sheet (PDF, sample)</button></div>
+          </div>
+
+          <div class="log-row" data-fm-unit="R-101">
+            <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Oct 30, 2026 — Oil &amp; filters</strong><span style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span class="kind-tag sched">SCHEDULED SERVICE</span><span class="unit-tag">UNIT R-101</span></span></div>
+            <div class="small dim" style="margin-top:2px">2022 Freightliner Cascadia (fake) · Driver: D. Carter (fake) · 371,205 mi · Full-service oil &amp; filter change, lube · Shop: Sample Truck Care — Highway Shop (fake)</div>
+            <div class="small dim" style="margin-top:2px">Oil: <strong style="color:var(--text)">Shell Rotella T4 15W-40</strong> (sample) · 10 gal · Parts used (sample): Engine oil filter — <span class="tnum">Fleetguard LF14000NN</span> · Fuel filter — <span class="tnum">Fleetguard FF5776</span></div>
+            <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap;margin-top:6px"><span class="cond tnum" style="font-weight:700;font-size:var(--fs-lg)">$472.10</span><button class="export-btn" style="flex:0 1 auto;padding:8px 12px" data-act="download" data-doc="maint-sheet-r101-oil">⬇ Maintenance sheet (PDF, sample)</button></div>
+          </div>
+
+          <div class="log-row" data-fm-unit="12">
+            <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Oct 18, 2026 — Oil &amp; filters</strong><span style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span class="kind-tag sched">SCHEDULED SERVICE</span><span class="unit-tag">UNIT 12</span></span></div>
+            <div class="small dim" style="margin-top:2px">2021 Kenworth W900 · 612,340 mi · Full-service oil &amp; filter change, lube, fluid top-off · Shop: Sample Truck Care — Highway Shop (fake) — the top priced entry in the Maintenance log above.</div>
+            <div class="small dim" style="margin-top:2px">Oil: <strong style="color:var(--text)">Shell Rotella T5 10W-30</strong> (sample) · 11 gal · Parts used (sample): Engine oil filter — <span class="tnum">Fleetguard LF14000NN</span> · Fuel filter — <span class="tnum">Fleetguard FF5776</span></div>
+            <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap;margin-top:6px"><span class="cond tnum" style="font-weight:700;font-size:var(--fs-lg)">$486.50</span><button class="export-btn" style="flex:0 1 auto;padding:8px 12px" data-act="download" data-doc="maint-sheet-oil">⬇ Maintenance sheet (PDF, sample)</button></div>
+          </div>
+
+          <div class="log-row" data-fm-unit="12">
+            <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center"><strong>Sep 19, 2026 — Brake service</strong><span style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span class="kind-tag sched">SCHEDULED SERVICE</span><span class="unit-tag">UNIT 12</span></span></div>
+            <div class="small dim" style="margin-top:2px">2021 Kenworth W900 · 601,450 mi · Drive-axle brake pads, drums inspected, slack adjusters checked · Shop: Sample Brake &amp; Truck Repair (fake) — also in the Maintenance log above.</div>
+            <div class="small dim" style="margin-top:2px">Parts used (sample): Brake shoe kit, drive axle — <span class="tnum">Meritor Q Plus 4707 · R801079 (sample part no.)</span> · Automatic slack adjuster — <span class="tnum">Haldex S-ABA · 40926023 (sample part no.)</span></div>
+            <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap;margin-top:6px"><span class="cond tnum" style="font-weight:700;font-size:var(--fs-lg)">$385.00</span><button class="export-btn" style="flex:0 1 auto;padding:8px 12px" data-act="download" data-doc="maint-sheet-brakes">⬇ Maintenance sheet (PDF, sample)</button></div>
+          </div>
+        </div>
+        <p class="xs dim" style="margin-top:10px;line-height:1.5">Owner / dispatch seats only in the full app — a driver sees their own truck's log; the fleet roll-up never crosses fleets. Preview sample only: fake trucks, fake drivers, fake records; nothing filters, saves, or sends for real beyond this screen.</p>
       </div>
 
       <h2 class="sec">Predictive maintenance — fault codes (sample)</h2>
@@ -3621,6 +3696,62 @@
           <button class="export-btn" data-act="copy" data-doc="ifta">⧉ Copy</button>
           <button class="export-btn" data-act="send" data-doc="ifta">↗ Send out</button>
         </div>
+      </div>
+
+      <h2 class="sec">Fuel Cost Calculator — what a load burns (sample)</h2>
+      <div class="card" style="border-color:var(--neon-a)" aria-label="Fuel Cost Calculator — sample, live estimate">
+        <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap">
+          <strong>⛽ Fuel Cost Calculator</strong>
+          <span class="stage-tag">ESTIMATE · FOR PLANNING</span>
+        </div>
+        <p class="small dim" style="margin-top:6px;line-height:1.55">One plain answer per load: <strong style="color:var(--text)">how many gallons it needs, what that fuel costs, and what it costs per mile</strong>. It starts filled in with this demo's numbers — <strong style="color:var(--text)">MPG from the truck profile (7.0)</strong> and <strong style="color:var(--text)">price from the average of the logged fuel purchases above ($3.59/gal)</strong> — and the answers update live as you type. <strong style="color:var(--text)">An estimate for planning only</strong> — the sealed fuel purchase log above stays the record.</p>
+
+        <label class="xs dim" for="fuelCalcLoad" style="display:block;margin-top:12px;font-weight:700">PICK A LOAD — OPTIONAL, PREFILLS THE MILES (SAMPLE LOADS)</label>
+        <select class="field" id="fuelCalcLoad" style="margin-top:4px" aria-label="Pick a load to prefill the miles — sample loads">
+          <option value="1042" selected>Load #1042 — Mobile, AL → Dallas, TX · 562 mi + 38 deadhead · pay $1,360.00</option>
+          <option value="1051">Load #1051 — Houston, TX → Mobile, AL · 468 mi + 55 deadhead · pay $1,180.00</option>
+          <option value="1037">Load #1037 — Peacock Pavers Yard, AL → Pensacola, FL · 168 mi + 22 deadhead · pay $412.50</option>
+          <option value="">No load — type the miles myself (no pay)</option>
+        </select>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+          <div>
+            <label class="xs dim" for="fuelDist" style="display:block;font-weight:700">Trip distance — loaded miles</label>
+            <input class="field" id="fuelDist" type="number" inputmode="decimal" min="0" step="1" value="562" style="font-size:16px;margin-top:4px" aria-label="Trip distance in miles — sample, editable" />
+          </div>
+          <div>
+            <label class="xs dim" for="fuelDead" style="display:block;font-weight:700">Deadhead miles</label>
+            <input class="field" id="fuelDead" type="number" inputmode="decimal" min="0" step="1" value="38" style="font-size:16px;margin-top:4px" aria-label="Deadhead miles — sample, editable" />
+          </div>
+          <div>
+            <label class="xs dim" for="fuelMpg" style="display:block;font-weight:700">Fuel economy — MPG</label>
+            <input class="field" id="fuelMpg" type="number" inputmode="decimal" min="0" step="0.1" value="7.0" style="font-size:16px;margin-top:4px" aria-label="Miles per gallon — sample, editable" />
+          </div>
+          <div>
+            <label class="xs dim" for="fuelPrice" style="display:block;font-weight:700">Fuel price — $ per gallon</label>
+            <input class="field" id="fuelPrice" type="number" inputmode="decimal" min="0" step="0.01" value="3.59" style="font-size:16px;margin-top:4px" aria-label="Fuel price per gallon — sample, editable" />
+          </div>
+        </div>
+
+        <div class="xs" style="font-weight:800;letter-spacing:.08em;margin:16px 0 4px">THE ANSWER — LIVE, FROM YOUR NUMBERS ABOVE</div>
+        <div>
+          <div class="kv-row"><span class="k">Total miles — loaded + deadhead</span><span class="v tnum" id="fuelTotalMi">600 mi</span></div>
+          <div class="kv-row"><span class="k"><strong style="color:var(--text)">Gallons needed</strong> — total miles ÷ MPG</span><span class="v tnum" id="fuelGal" style="font-size:var(--fs-lg)">85.7 gal</span></div>
+          <div class="kv-row"><span class="k"><strong style="color:var(--text)">Total fuel cost</strong> — gallons × price</span><span class="v tnum neon-text" id="fuelCost" style="font-size:var(--fs-lg)">$307.71</span></div>
+          <div class="kv-row"><span class="k">Cost per mile — fuel only, on total miles</span><span class="v tnum" id="fuelCpm">$0.51/mi</span></div>
+        </div>
+
+        <div id="fuelPayBlock">
+          <div class="xs" style="font-weight:800;letter-spacing:.08em;margin:16px 0 4px">AGAINST THE LOAD'S PAY — <span id="fuelPayLoadName">LOAD #1042</span> (SAMPLE)</div>
+          <div>
+            <div class="kv-row"><span class="k">Load pay on file</span><span class="v tnum" id="fuelPayAmt">$1,360.00</span></div>
+            <div class="kv-row"><span class="k">Fuel's share of the pay</span><span class="v tnum" id="fuelShare">22.6%</span></div>
+            <div class="kv-row"><span class="k"><strong style="color:var(--text)">Left after fuel</strong> — pay − fuel cost</span><span class="v tnum ok" id="fuelNet" style="font-size:var(--fs-lg)">$1,052.29</span></div>
+          </div>
+        </div>
+        <p class="xs dim" id="fuelNoPayNote" style="display:none;margin-top:12px;line-height:1.5">No load picked, so there's no pay to judge against — pick a load above and the fuel's share of its pay and what's left after fuel show here.</p>
+
+        <p class="xs dim" style="margin-top:10px;line-height:1.5">Sample loads, sample miles, sample prices — fake demo numbers only, and editing them changes nothing outside this card. In the full app the same calculator pre-fills from your truck profile and your own logged prices, and picking one of your loads fills its miles in the same way.</p>
       </div>
 
       <h2 class="sec">Trip logs</h2>
@@ -4224,21 +4355,88 @@
         <p class="xs dim" style="margin-top:8px">Scores and rank run on 31-day seasons, then reset — past seasons stay archived with an all-time-best badge.</p>
       </div>
 
-      <h2 class="sec">ELD hub (sample)</h2>
+      <h2 class="sec" id="eldHub">ELD hub (sample)</h2>
       <div class="card" aria-label="ELD hub — sample">
         <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap">
-          <strong>🔌 ELD connections</strong><span class="stage-tag">PREVIEW · SAMPLE</span>
+          <strong>🔌 ELD connections</strong><span style="display:flex;gap:6px;flex-wrap:wrap"><span class="status-on">GEOTAB · MOTIVE · SAMSARA · LIVE</span><span class="stage-tag">PREVIEW · SAMPLE</span></span>
         </div>
-        <p class="small dim" style="margin-top:6px;line-height:1.55">ELD connections live in this hub. STONEMILES' own HOS clocks stay a planning aid — your ELD is the official record — and the sync pipeline below is how ELD data would flow in once a device is connected.</p>
+        <p class="small dim" style="margin-top:6px;line-height:1.55">ELD connections live in this hub. STONEMILES' own HOS clocks stay a planning aid — your ELD is the official record. <strong style="color:var(--text)">Geotab, Motive, and Samsara are all live connections now</strong>: connect Geotab with your MyGeotab login below, or Motive and Samsara with an API token from their dashboards, and sync your own truck's record in. Sample forms and sample data throughout this preview — nothing here connects, syncs, or saves.</p>
+
+        <div class="card2" style="margin-top:10px;border:1.5px solid var(--neon-a)">
+          <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap"><strong>🛰️ Geotab — connect with your MyGeotab login</strong><span class="status-on">LIVE · CONNECTABLE</span></div>
+          <p class="small dim" style="margin-top:4px;line-height:1.55">Geotab has <strong style="color:var(--text)">no token page</strong> — your MyGeotab login <em>is</em> the credential. Ask your fleet admin for a MyGeotab login with API access on their database (database name, username, and password), then enter it here. The app <strong style="color:var(--text)">checks the login with Geotab before it saves anything</strong> — a bad login stores nothing.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+            <div>
+              <label class="xs dim" for="gtServer" style="display:block;font-weight:700">Server</label>
+              <input class="field" id="gtServer" type="text" value="my.geotab.com" style="margin-top:4px" aria-label="Geotab server — sample form" />
+            </div>
+            <div>
+              <label class="xs dim" for="gtDatabase" style="display:block;font-weight:700">Database</label>
+              <input class="field" id="gtDatabase" type="text" autocomplete="off" placeholder="Your fleet's database name" style="margin-top:4px" aria-label="MyGeotab database — sample form" />
+            </div>
+            <div>
+              <label class="xs dim" for="gtUser" style="display:block;font-weight:700">Username</label>
+              <input class="field" id="gtUser" type="text" autocomplete="off" placeholder="MyGeotab username" style="margin-top:4px" aria-label="MyGeotab username — sample form" />
+            </div>
+            <div>
+              <label class="xs dim" for="gtPass" style="display:block;font-weight:700">Password</label>
+              <input class="field" id="gtPass" type="password" autocomplete="off" placeholder="MyGeotab password" style="margin-top:4px" aria-label="MyGeotab password — sample form" />
+            </div>
+          </div>
+          <button class="btn-neon" id="geotabConnectBtn" style="width:100%;padding:12px;margin-top:10px">🔌 Check login &amp; connect Geotab (demo)</button>
+          <p class="xs dim" style="margin-top:8px;line-height:1.5">Once connected, the app finds <strong style="color:var(--text)">your truck by the VIN already in your profile</strong> — you only ever see your own truck, never the whole fleet's devices. Sample form in this preview; nothing is checked, connected, or saved here.</p>
+        </div>
+
         <div class="card2" style="margin-top:10px">
-          <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap"><strong>Sample ELD Provider — connection (sample)</strong><span class="status-wait">NOT CONNECTED · SAMPLE</span></div>
-          <div style="border:1px dashed var(--border);border-radius:12px;padding:12px;margin-top:10px">
+          <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap"><strong>🛰️ Geotab — connected (sample truck)</strong><span class="status-live">CONNECTED · LIVE SYNC</span></div>
+          <p class="small dim" style="margin-top:4px;line-height:1.55">2021 Kenworth W900 · Unit 12 — matched by the VIN on file (sample VIN ending …3891). This is what the card looks like once your login checks out: one tap pulls your truck's record in.</p>
+          <button class="btn-neon" id="geotabSyncBtn" style="width:100%;padding:12px;margin-top:8px">↻ Sync now (demo)</button>
+          <div class="log-row" style="margin-top:10px" id="geotabSyncResult" aria-live="polite"><strong>Last sync — sample, just now</strong><div class="small dim" style="margin-top:2px;line-height:1.55">HOS logs &amp; clocks synced · Odometer <strong style="color:var(--text)">612,480 mi</strong> · Engine hours <strong style="color:var(--text)">14,826 hrs</strong> · Inspections synced (latest pre-trip DVIR on file) · IFTA miles synced — <strong style="color:var(--text)">1,350 mi</strong> this quarter (AL 402 · MS 152 · LA 548 · TX 188 · FL 60). All figures are fake preview samples.</div></div>
+          <p class="xs dim" style="margin-top:8px;line-height:1.5">Synced ELD miles are <strong style="color:var(--text)">record-grade</strong> — once Geotab is connected, the ELD odometer becomes the source of record and GPS drops to backup. Your ELD stays the official record; STONEMILES' own clocks stay a planning aid.</p>
+        </div>
+
+        <div class="card2" style="margin-top:10px">
+          <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap"><strong>Samsara — connect by API token</strong><span class="status-on">LIVE · CONNECTABLE</span></div>
+          <p class="small dim" style="margin-top:4px;line-height:1.55">Samsara connects with an <strong style="color:var(--text)">API token</strong> from your Samsara dashboard — the token <em>is</em> the credential. Paste it here. The app <strong style="color:var(--text)">checks the token with Samsara before it saves anything</strong> — a bad token stores nothing.</p>
+          <label class="xs dim" for="samsaraToken" style="display:block;margin-top:8px;font-weight:700">API token</label>
+          <input class="field" id="samsaraToken" type="password" autocomplete="off" placeholder="Paste your Samsara API token" style="margin-top:4px" aria-label="Samsara API token — sample form" />
+          <button class="btn-neon" id="samsaraConnectBtn" style="width:100%;padding:12px;margin-top:10px">🔑 Check token &amp; connect Samsara (demo)</button>
+          <p class="xs dim" style="margin-top:8px;line-height:1.5">Once connected, the app finds <strong style="color:var(--text)">your truck by the VIN already in your profile</strong> — you only ever see your own truck, never the whole fleet's devices. Sample form in this preview; nothing is checked, connected, or saved here.</p>
+        </div>
+
+        <div class="card2" style="margin-top:10px">
+          <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap"><strong>🛰️ Samsara — connected (sample truck)</strong><span class="status-live">CONNECTED · LIVE SYNC</span></div>
+          <p class="small dim" style="margin-top:4px;line-height:1.55">2021 Kenworth W900 · Unit 12 — matched by the VIN on file (sample VIN ending …3891). This is what the card looks like once your token checks out: one tap pulls your truck's record in.</p>
+          <button class="btn-neon" id="samsaraSyncBtn" style="width:100%;padding:12px;margin-top:8px">↻ Sync now (demo)</button>
+          <div class="log-row" style="margin-top:10px" id="samsaraSyncResult" aria-live="polite"><strong>Last sync — sample, just now</strong><div class="small dim" style="margin-top:2px;line-height:1.55">HOS logs &amp; clocks synced · Odometer <strong style="color:var(--text)">612,480 mi</strong> · Engine hours <strong style="color:var(--text)">14,826 hrs</strong> · Inspections synced (latest pre-trip DVIR on file) · IFTA miles synced — <strong style="color:var(--text)">1,350 mi</strong> this quarter (AL 402 · MS 152 · LA 548 · TX 188 · FL 60). All figures are fake preview samples.</div></div>
+          <p class="xs dim" style="margin-top:8px;line-height:1.5">Synced ELD miles are <strong style="color:var(--text)">record-grade</strong> — once Samsara is connected, the ELD odometer becomes the source of record and GPS drops to backup. Your ELD stays the official record; STONEMILES' own clocks stay a planning aid.</p>
+        </div>
+
+        <div class="card2" style="margin-top:10px">
+          <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap"><strong>Motive — connect by API token</strong><span class="status-on">LIVE · CONNECTABLE</span></div>
+          <p class="small dim" style="margin-top:4px;line-height:1.55">Motive connects with an <strong style="color:var(--text)">API token</strong> from your Motive dashboard — the token <em>is</em> the credential. Paste it here. The app <strong style="color:var(--text)">checks the token with Motive before it saves anything</strong> — a bad token stores nothing.</p>
+          <label class="xs dim" for="motiveToken" style="display:block;margin-top:8px;font-weight:700">API token</label>
+          <input class="field" id="motiveToken" type="password" autocomplete="off" placeholder="Paste your Motive API token" style="margin-top:4px" aria-label="Motive API token — sample form" />
+          <button class="btn-neon" id="motiveConnectBtn" style="width:100%;padding:12px;margin-top:10px">🔑 Check token &amp; connect Motive (demo)</button>
+          <p class="xs dim" style="margin-top:8px;line-height:1.5">Once connected, the app finds <strong style="color:var(--text)">your truck by the VIN already in your profile</strong> — you only ever see your own truck, never the whole fleet's devices. Sample form in this preview; nothing is checked, connected, or saved here.</p>
+        </div>
+
+        <div class="card2" style="margin-top:10px">
+          <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap"><strong>🛰️ Motive — connected (sample truck)</strong><span class="status-live">CONNECTED · LIVE SYNC</span></div>
+          <p class="small dim" style="margin-top:4px;line-height:1.55">2021 Kenworth W900 · Unit 12 — matched by the VIN on file (sample VIN ending …3891). This is what the card looks like once your token checks out: one tap pulls your truck's record in.</p>
+          <button class="btn-neon" id="motiveSyncBtn" style="width:100%;padding:12px;margin-top:8px">↻ Sync now (demo)</button>
+          <div class="log-row" style="margin-top:10px" id="motiveSyncResult" aria-live="polite"><strong>Last sync — sample, just now</strong><div class="small dim" style="margin-top:2px;line-height:1.55">HOS logs &amp; clocks synced · Odometer <strong style="color:var(--text)">612,480 mi</strong> · Engine hours <strong style="color:var(--text)">14,826 hrs</strong> · Inspections synced (latest pre-trip DVIR on file) · IFTA miles synced — <strong style="color:var(--text)">1,350 mi</strong> this quarter (AL 402 · MS 152 · LA 548 · TX 188 · FL 60). All figures are fake preview samples.</div></div>
+          <p class="xs dim" style="margin-top:8px;line-height:1.5">Synced ELD miles are <strong style="color:var(--text)">record-grade</strong> — once Motive is connected, the ELD odometer becomes the source of record and GPS drops to backup. Your ELD stays the official record; STONEMILES' own clocks stay a planning aid.</p>
+        </div>
+
+        <div class="card2" style="margin-top:10px">
+          <div style="border:1px dashed var(--border);border-radius:12px;padding:12px">
             <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap"><strong>🧪 Run test sync (simulated device)</strong><span class="cat-tag">SIMULATED</span></div>
             <p class="small dim" style="margin-top:4px;line-height:1.55">Pushes clearly-marked simulated device data through the real sync pipeline, so the path can be proven before a real device shows up. Stored test data is stamped <strong style="color:var(--text)">“simulated”</strong> everywhere it appears and is skipped by the official-record surfaces — test data never poses as the record.</p>
             <button class="btn-ghost" style="width:100%;padding:11px;margin-top:8px" data-toast="Demo: a test sync pushes simulated device data through the sync pipeline — stamped simulated, never the official record. Nothing syncs or saves in this preview.">🧪 Run test sync (demo)</button>
             <div class="log-row" style="margin-top:10px"><strong>Last test sync record (sample)</strong><div class="small dim" style="margin-top:2px">Odometer 612,480 mi · duty events 4 · stamped <strong style="color:var(--text)">SIMULATED</strong> · kept out of the official record.</div></div>
           </div>
-          <p class="xs dim" style="margin-top:8px;line-height:1.5"><strong style="color:var(--text)">Live sync still awaits a real ELD device.</strong> Until one is connected, miles stay GPS-labelled estimates, exactly as the rest of this preview labels them.</p>
+          <p class="xs dim" style="margin-top:8px;line-height:1.5">With no ELD connected, miles stay GPS-labelled estimates, exactly as the rest of this preview labels them — Geotab, Motive, and Samsara are all live doors in.</p>
         </div>
       </div>
 
@@ -5520,6 +5718,105 @@ renderLoads();
   recalc();
 })();
 
+/* ============ Fuel Cost Calculator — live estimate from the demo's fake numbers (in-memory only) ============ */
+(function(){
+  var loadEl = $("#fuelCalcLoad"), distEl = $("#fuelDist"), deadEl = $("#fuelDead"), mpgEl = $("#fuelMpg"), priceEl = $("#fuelPrice");
+  if (!loadEl || !distEl || !deadEl || !mpgEl || !priceEl) return;
+  var LOADS = {
+    "1042": { loaded:562, dead:38, pay:1360.00, name:"LOAD #1042" },
+    "1051": { loaded:468, dead:55, pay:1180.00, name:"LOAD #1051" },
+    "1037": { loaded:168, dead:22, pay:412.50, name:"LOAD #1037" }
+  };
+  function money(n){ return "$" + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+  function num(el, fallback){ var v = parseFloat(el.value); return (isNaN(v) || v < 0) ? fallback : v; }
+  function recalc(){
+    var dist = num(distEl, 0), dead = num(deadEl, 0), mpg = num(mpgEl, 0), price = num(priceEl, 0);
+    var total = dist + dead;
+    var gal = mpg > 0 ? total / mpg : 0;
+    var cost = gal * price;
+    var cpm = total > 0 ? cost / total : 0;
+    $("#fuelTotalMi").textContent = total.toLocaleString("en-US") + " mi";
+    $("#fuelGal").textContent = gal.toFixed(1) + " gal";
+    $("#fuelCost").textContent = money(cost);
+    $("#fuelCpm").textContent = money(cpm) + "/mi";
+    var L = LOADS[loadEl.value];
+    var block = $("#fuelPayBlock"), note = $("#fuelNoPayNote");
+    if (L){
+      block.style.display = "";
+      note.style.display = "none";
+      $("#fuelPayLoadName").textContent = L.name;
+      $("#fuelPayAmt").textContent = money(L.pay);
+      $("#fuelShare").textContent = (L.pay > 0 ? (cost / L.pay * 100).toFixed(1) : "0.0") + "%";
+      var net = L.pay - cost;
+      var netEl = $("#fuelNet");
+      netEl.textContent = (net < 0 ? "−" : "") + money(Math.abs(net));
+      netEl.className = "v tnum " + (net >= 0 ? "ok" : "danger");
+    } else {
+      block.style.display = "none";
+      note.style.display = "";
+    }
+  }
+  loadEl.addEventListener("change", function(){
+    var L = LOADS[loadEl.value];
+    if (L){ distEl.value = L.loaded; deadEl.value = L.dead; }
+    recalc();
+  });
+  [distEl, deadEl, mpgEl, priceEl].forEach(function(el){ el.addEventListener("input", recalc); });
+  recalc();
+})();
+
+/* ============ Geotab — MyGeotab login check + Sync now (demo, in-memory only) ============ */
+(function(){
+  var syncBtn = $("#geotabSyncBtn"), result = $("#geotabSyncResult");
+  if (syncBtn && result){
+    syncBtn.addEventListener("click", function(){
+      result.innerHTML = "<strong>Synced just now — demo sync</strong><div class=\"small dim\" style=\"margin-top:2px;line-height:1.55\">HOS logs &amp; clocks synced · Odometer <strong style=\"color:var(--text)\">612,480 mi</strong> · Engine hours <strong style=\"color:var(--text)\">14,826 hrs</strong> · Inspections synced (latest pre-trip DVIR on file) · IFTA miles synced — <strong style=\"color:var(--text)\">1,350 mi</strong> this quarter (AL 402 · MS 152 · LA 548 · TX 188 · FL 60). Your truck only — matched by VIN. All figures are fake preview samples; nothing synced or saved.</div>";
+      toast("Demo sync complete — HOS logs & clocks, odometer, engine hours, inspections, and IFTA miles pulled in for your truck (sample). Nothing syncs or saves in this preview.");
+    });
+  }
+  var connBtn = $("#geotabConnectBtn");
+  if (connBtn){
+    connBtn.addEventListener("click", function(){
+      var db = $("#gtDatabase"), user = $("#gtUser"), pass = $("#gtPass"), server = $("#gtServer");
+      if (!server.value.trim() || !db.value.trim() || !user.value.trim() || !pass.value){
+        toast("Demo: all four fields are needed — server, database, username, and password. The login is checked with Geotab before anything saves, so a bad login stores nothing.");
+        return;
+      }
+      toast("Demo: in the full app this login is checked with Geotab first — only a login Geotab accepts gets saved, and your truck is then matched by VIN. Nothing is checked or saved in this preview.");
+    });
+  }
+})();
+
+/* ============ Samsara + Motive — API-token check + Sync now (demo, in-memory only) ============ */
+(function(){
+  function wireSync(btnSel, resultSel, name){
+    var syncBtn = $(btnSel), result = $(resultSel);
+    if (syncBtn && result){
+      syncBtn.addEventListener("click", function(){
+        result.innerHTML = "<strong>Synced just now — demo sync</strong><div class=\"small dim\" style=\"margin-top:2px;line-height:1.55\">HOS logs &amp; clocks synced · Odometer <strong style=\"color:var(--text)\">612,480 mi</strong> · Engine hours <strong style=\"color:var(--text)\">14,826 hrs</strong> · Inspections synced (latest pre-trip DVIR on file) · IFTA miles synced — <strong style=\"color:var(--text)\">1,350 mi</strong> this quarter (AL 402 · MS 152 · LA 548 · TX 188 · FL 60). Your truck only — matched by VIN. All figures are fake preview samples; nothing synced or saved.</div>";
+        toast("Demo sync complete — HOS logs & clocks, odometer, engine hours, inspections, and IFTA miles pulled in from " + name + " for your truck (sample). Nothing syncs or saves in this preview.");
+      });
+    }
+  }
+  function wireConnect(btnSel, tokenSel, name){
+    var connBtn = $(btnSel);
+    if (connBtn){
+      connBtn.addEventListener("click", function(){
+        var token = $(tokenSel);
+        if (!token.value.trim()){
+          toast("Demo: paste your " + name + " API token first. The token is checked with " + name + " before anything saves, so a bad token stores nothing.");
+          return;
+        }
+        toast("Demo: in the full app this token is checked with " + name + " first — only a token " + name + " accepts gets saved, and your truck is then matched by VIN. Nothing is checked or saved in this preview.");
+      });
+    }
+  }
+  wireSync("#samsaraSyncBtn", "#samsaraSyncResult", "Samsara");
+  wireConnect("#samsaraConnectBtn", "#samsaraToken", "Samsara");
+  wireSync("#motiveSyncBtn", "#motiveSyncResult", "Motive");
+  wireConnect("#motiveConnectBtn", "#motiveToken", "Motive");
+})();
+
 /* ============ Trip sheet ============ */
 var SHEET = [
   { state:"Alabama", miles:118 }, { state:"Mississippi", miles:76 }, { state:"Louisiana", miles:274 }, { state:"Texas", miles:94 }
@@ -5948,7 +6245,189 @@ var DOCS = {
     "Shop: Sample Inspection Station (fake)\n" +
     "Work: Annual inspection - passed, sticker applied\n" +
     "Cost: $175.00 - Next due: Aug 28, 2027\n" +
-    "In the full app this file is the inspection report PDF itself.\n" + WALLET_LINE }
+    "In the full app this file is the inspection report PDF itself.\n" + WALLET_LINE },
+  "maint-sheet-oil": { title:"Maintenance sheet — oil & filters, Oct 18, 2026 (sample)", filename:"stonemiles-maintenance-sheet-unit12-oil-sample.txt", text:
+    "STONEMILES - Maintenance Sheet (SAMPLE - fake preview data only)\n" +
+    "One clean page per entry - made to send a carrier.\n\n" +
+    "TRUCK\n" +
+    "Unit: 12 - 2021 Kenworth W900 - Cummins X15 (sample)\n" +
+    "VIN: ...4821 (masked in this preview - the full VIN prints on the owner's copy)\n" +
+    "Plate: ...317 (masked in this preview - the full plate prints on the owner's copy)\n\n" +
+    "ENTRY\n" +
+    "Date: Oct 18, 2026\n" +
+    "Odometer: 612,340 mi\n" +
+    "Kind: Scheduled service (planned service / PM work)\n" +
+    "Work done: Full-service oil & filter change, lube, fluid top-off\n" +
+    "Oil: Shell Rotella T5 10W-30 (sample) - 11 gal\n" +
+    "Parts used:\n" +
+    "  Engine oil filter - Fleetguard LF14000NN (sample part no.)\n" +
+    "  Fuel filter - Fleetguard FF5776 (sample part no.)\n" +
+    "Performed by: Sample Truck Care - Highway Shop (fake)\n" +
+    "Cost: $486.50\n" +
+    "Next due: 637,340 mi\n\n" +
+    "In the full app this sheet downloads as a one-page PDF.\n" + WALLET_LINE },
+  "maint-sheet-tires": { title:"Maintenance sheet — drive tire, Oct 2, 2026 (sample)", filename:"stonemiles-maintenance-sheet-unit12-tire-sample.txt", text:
+    "STONEMILES - Maintenance Sheet (SAMPLE - fake preview data only)\n" +
+    "One clean page per entry - made to send a carrier.\n\n" +
+    "TRUCK\n" +
+    "Unit: 12 - 2021 Kenworth W900 - Cummins X15 (sample)\n" +
+    "VIN: ...4821 (masked in this preview - the full VIN prints on the owner's copy)\n" +
+    "Plate: ...317 (masked in this preview - the full plate prints on the owner's copy)\n\n" +
+    "ENTRY\n" +
+    "Date: Oct 2, 2026\n" +
+    "Odometer: 608,120 mi\n" +
+    "Kind: Repair (unscheduled fix)\n" +
+    "Work done: Left inner drive tire replaced - the tire flagged on the DVIR\n" +
+    "Parts used:\n" +
+    "  Drive tire 11R22.5 - Michelin X Line Energy D - MPN 74903 (sample part no.)\n" +
+    "  Valve stem - TR572 (sample part no.)\n" +
+    "Performed by: Sample Tire Shop (fake)\n" +
+    "Cost: $212.40\n\n" +
+    "In the full app this sheet downloads as a one-page PDF.\n" + WALLET_LINE },
+  "maint-sheet-brakes": { title:"Maintenance sheet — brake service, Sep 19, 2026 (sample)", filename:"stonemiles-maintenance-sheet-unit12-brakes-sample.txt", text:
+    "STONEMILES - Maintenance Sheet (SAMPLE - fake preview data only)\n" +
+    "One clean page per entry - made to send a carrier.\n\n" +
+    "TRUCK\n" +
+    "Unit: 12 - 2021 Kenworth W900 - Cummins X15 (sample)\n" +
+    "VIN: ...4821 (masked in this preview - the full VIN prints on the owner's copy)\n" +
+    "Plate: ...317 (masked in this preview - the full plate prints on the owner's copy)\n\n" +
+    "ENTRY\n" +
+    "Date: Sep 19, 2026\n" +
+    "Odometer: 601,450 mi\n" +
+    "Kind: Scheduled service (planned service / PM work)\n" +
+    "Work done: Drive-axle brake pads, drums inspected, slack adjusters checked\n" +
+    "Parts used:\n" +
+    "  Brake shoe kit, drive axle - Meritor Q Plus 4707 - R801079 (sample part no.)\n" +
+    "  Automatic slack adjuster - Haldex S-ABA - 40926023 (sample part no.)\n" +
+    "Performed by: Sample Brake & Truck Repair (fake)\n" +
+    "Cost: $385.00\n" +
+    "Next due: inspect at 626,450 mi\n\n" +
+    "In the full app this sheet downloads as a one-page PDF.\n" + WALLET_LINE },
+  "maint-sheet-dot": { title:"Maintenance sheet — DOT inspection, Aug 28, 2026 (sample)", filename:"stonemiles-maintenance-sheet-unit12-dot-sample.txt", text:
+    "STONEMILES - Maintenance Sheet (SAMPLE - fake preview data only)\n" +
+    "One clean page per entry - made to send a carrier.\n\n" +
+    "TRUCK\n" +
+    "Unit: 12 - 2021 Kenworth W900 - Cummins X15 (sample)\n" +
+    "VIN: ...4821 (masked in this preview - the full VIN prints on the owner's copy)\n" +
+    "Plate: ...317 (masked in this preview - the full plate prints on the owner's copy)\n\n" +
+    "ENTRY\n" +
+    "Date: Aug 28, 2026\n" +
+    "Odometer: 594,200 mi\n" +
+    "Kind: Scheduled service (planned service / PM work)\n" +
+    "Work done: Annual DOT inspection - passed, sticker applied\n" +
+    "Parts used: none - inspection only\n" +
+    "Performed by: Sample Inspection Station (fake)\n" +
+    "Cost: $175.00\n" +
+    "Next due: Aug 28, 2027\n\n" +
+    "In the full app this sheet downloads as a one-page PDF.\n" + WALLET_LINE },
+  "maint-sheet-scr": { title:"Maintenance sheet — SCR work order draft, Nov 14, 2026 (sample)", filename:"stonemiles-maintenance-sheet-unit12-scr-draft-sample.txt", text:
+    "STONEMILES - Maintenance Sheet (SAMPLE - fake preview data only)\n" +
+    "One clean page per entry - made to send a carrier.\n" +
+    "STATUS: DRAFT - work not yet performed; a human confirms it before any work is booked.\n\n" +
+    "TRUCK\n" +
+    "Unit: 12 - 2021 Kenworth W900 - Cummins X15 (sample)\n" +
+    "VIN: ...4821 (masked in this preview - the full VIN prints on the owner's copy)\n" +
+    "Plate: ...317 (masked in this preview - the full plate prints on the owner's copy)\n\n" +
+    "ENTRY\n" +
+    "Date: Nov 14, 2026 (drafted from fault code SPN 4364 - FMI 18)\n" +
+    "Odometer: - (carried from the truck's readings when confirmed, sample)\n" +
+    "Kind: Repair (unscheduled fix)\n" +
+    "Work done: Exhaust aftertreatment (SCR) service - check the SCR / DEF system, NOx sensors, and dosing\n" +
+    "Parts used: - (none yet - the work isn't booked)\n" +
+    "Performed by: - (not assigned yet)\n" +
+    "Cost: - (not priced yet)\n\n" +
+    "In the full app this sheet downloads as a one-page PDF.\n" + WALLET_LINE },
+  "maint-sheet-marker": { title:"Maintenance sheet — trailer marker light draft, Oct 22, 2026 (sample)", filename:"stonemiles-maintenance-sheet-unit12-marker-draft-sample.txt", text:
+    "STONEMILES - Maintenance Sheet (SAMPLE - fake preview data only)\n" +
+    "One clean page per entry - made to send a carrier.\n" +
+    "STATUS: DRAFT - auto-created from the Oct 22, 2026 DVIR; the defect stays open until this entry is marked closed.\n\n" +
+    "TRUCK\n" +
+    "Unit: 12 - 2021 Kenworth W900 - Cummins X15 (sample) - trailer: 2022 Fontaine Infinity step deck (sample)\n" +
+    "VIN: ...4821 (masked in this preview - the full VIN prints on the owner's copy)\n" +
+    "Plate: ...317 (masked in this preview - the full plate prints on the owner's copy)\n\n" +
+    "ENTRY\n" +
+    "Date: Oct 22, 2026 (drafted from the DVIR)\n" +
+    "Odometer: - (sample draft)\n" +
+    "Kind: Repair (unscheduled fix)\n" +
+    "Work done: Trailer marker light - diagnose & repair (right-rear marker light out)\n" +
+    "Parts used: - (none yet - diagnosis comes first)\n" +
+    "Performed by: - (not assigned yet)\n" +
+    "Cost: - (not priced yet)\n\n" +
+    "In the full app this sheet downloads as a one-page PDF.\n" + WALLET_LINE },
+  "maint-sheet-r101-alt": { title:"Maintenance sheet — Unit R-101 alternator, Nov 20, 2026 (sample)", filename:"stonemiles-maintenance-sheet-r101-alternator-sample.txt", text:
+    "STONEMILES - Maintenance Sheet (SAMPLE - fake preview data only)\n" +
+    "One clean page per entry - made to send a carrier.\n\n" +
+    "TRUCK\n" +
+    "Unit: R-101 - 2022 Freightliner Cascadia (fake) - RUGGS LOGISTICS demo fleet\n" +
+    "VIN: ...7710 (masked in this preview - the full VIN prints on the owner's copy)\n" +
+    "Plate: ...552 (masked in this preview - the full plate prints on the owner's copy)\n\n" +
+    "ENTRY\n" +
+    "Date: Nov 20, 2026\n" +
+    "Odometer: 388,410 mi\n" +
+    "Kind: Repair (unscheduled fix)\n" +
+    "Work done: Alternator replaced - charging fault on the road\n" +
+    "Parts used:\n" +
+    "  Alternator 200A - Delco Remy 8600837 (sample part no.)\n" +
+    "  Serpentine belt - Gates K080780 (sample part no.)\n" +
+    "Performed by: Sample Roadside Repair (fake) - driver on file: D. Carter (fake)\n" +
+    "Cost: $612.75\n\n" +
+    "In the full app this sheet downloads as a one-page PDF.\n" + WALLET_LINE },
+  "maint-sheet-r102-pm": { title:"Maintenance sheet — Unit R-102 PM service, Nov 12, 2026 (sample)", filename:"stonemiles-maintenance-sheet-r102-pm-sample.txt", text:
+    "STONEMILES - Maintenance Sheet (SAMPLE - fake preview data only)\n" +
+    "One clean page per entry - made to send a carrier.\n\n" +
+    "TRUCK\n" +
+    "Unit: R-102 - 2020 Peterbilt 389 (fake) - RUGGS LOGISTICS demo fleet\n" +
+    "VIN: ...3308 (masked in this preview - the full VIN prints on the owner's copy)\n" +
+    "Plate: ...914 (masked in this preview - the full plate prints on the owner's copy)\n\n" +
+    "ENTRY\n" +
+    "Date: Nov 12, 2026\n" +
+    "Odometer: 502,775 mi\n" +
+    "Kind: Scheduled service (planned service / PM work)\n" +
+    "Work done: Full PM - oil & filters, lube, inspection\n" +
+    "Oil: Mobil Delvac 1300 Super 15W-40 (sample) - 11 gal\n" +
+    "Parts used:\n" +
+    "  Engine oil filter - Fleetguard LF14000NN (sample part no.)\n" +
+    "  Fuel filter - Fleetguard FF5776 (sample part no.)\n" +
+    "Performed by: Sample Truck Care - Highway Shop (fake) - driver on file: M. Alvarez (fake)\n" +
+    "Cost: $438.20\n\n" +
+    "In the full app this sheet downloads as a one-page PDF.\n" + WALLET_LINE },
+  "maint-sheet-r103-air": { title:"Maintenance sheet — Unit R-103 air dryer + brake chamber, Nov 5, 2026 (sample)", filename:"stonemiles-maintenance-sheet-r103-air-sample.txt", text:
+    "STONEMILES - Maintenance Sheet (SAMPLE - fake preview data only)\n" +
+    "One clean page per entry - made to send a carrier.\n\n" +
+    "TRUCK\n" +
+    "Unit: R-103 - 2019 Kenworth T680 (fake) - RUGGS LOGISTICS demo fleet\n" +
+    "VIN: ...6642 (masked in this preview - the full VIN prints on the owner's copy)\n" +
+    "Plate: ...207 (masked in this preview - the full plate prints on the owner's copy)\n\n" +
+    "ENTRY\n" +
+    "Date: Nov 5, 2026\n" +
+    "Odometer: 441,930 mi\n" +
+    "Kind: Repair (unscheduled fix)\n" +
+    "Work done: Air dryer cartridge replaced; one leaking brake chamber replaced\n" +
+    "Parts used:\n" +
+    "  Air dryer cartridge - Bendix 109994 (sample part no.)\n" +
+    "  Brake chamber, type 30 - Haldex GC3030 (sample part no.)\n" +
+    "Performed by: Sample Brake & Truck Repair (fake) - driver on file: J. Thompson (fake)\n" +
+    "Cost: $289.60\n\n" +
+    "In the full app this sheet downloads as a one-page PDF.\n" + WALLET_LINE },
+  "maint-sheet-r101-oil": { title:"Maintenance sheet — Unit R-101 oil & filters, Oct 30, 2026 (sample)", filename:"stonemiles-maintenance-sheet-r101-oil-sample.txt", text:
+    "STONEMILES - Maintenance Sheet (SAMPLE - fake preview data only)\n" +
+    "One clean page per entry - made to send a carrier.\n\n" +
+    "TRUCK\n" +
+    "Unit: R-101 - 2022 Freightliner Cascadia (fake) - RUGGS LOGISTICS demo fleet\n" +
+    "VIN: ...7710 (masked in this preview - the full VIN prints on the owner's copy)\n" +
+    "Plate: ...552 (masked in this preview - the full plate prints on the owner's copy)\n\n" +
+    "ENTRY\n" +
+    "Date: Oct 30, 2026\n" +
+    "Odometer: 371,205 mi\n" +
+    "Kind: Scheduled service (planned service / PM work)\n" +
+    "Work done: Full-service oil & filter change, lube\n" +
+    "Oil: Shell Rotella T4 15W-40 (sample) - 10 gal\n" +
+    "Parts used:\n" +
+    "  Engine oil filter - Fleetguard LF14000NN (sample part no.)\n" +
+    "  Fuel filter - Fleetguard FF5776 (sample part no.)\n" +
+    "Performed by: Sample Truck Care - Highway Shop (fake) - driver on file: D. Carter (fake)\n" +
+    "Cost: $472.10\n\n" +
+    "In the full app this sheet downloads as a one-page PDF.\n" + WALLET_LINE }
 };
 function downloadDoc(doc){
   var blob = new Blob([doc.text], { type:(doc.mime || "text/plain") + ";charset=utf-8" });
@@ -6544,6 +7023,21 @@ $$("[data-ws-money]").forEach(function(b){
     if (seg) seg.click();
     var bar = document.getElementById("moneySeg");
     if (bar) setTimeout(function(){ bar.scrollIntoView({ block:"start" }); }, 60);
+  });
+});
+/* Fleet maintenance (Truck workspace): per-truck filter over the sample records */
+$$("[data-fm-filter]").forEach(function(b){
+  b.addEventListener("click", function(){
+    var unit = b.getAttribute("data-fm-filter");
+    $$("[data-fm-filter]").forEach(function(x){ x.classList.toggle("on", x === b); });
+    var rows = $$("[data-fm-unit]"), shown = 0;
+    rows.forEach(function(r){
+      var show = unit === "all" || r.getAttribute("data-fm-unit") === unit;
+      r.style.display = show ? "" : "none";
+      if (show) shown++;
+    });
+    var c = document.getElementById("fmCount");
+    if (c) c.textContent = "Showing " + shown + " of " + rows.length + " sample records — " + (unit === "all" ? "all trucks." : "Unit " + unit + " only.");
   });
 });
 </script>
