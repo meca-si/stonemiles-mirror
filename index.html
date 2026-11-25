@@ -1853,6 +1853,158 @@
         </div>
       </div>
 
+      <h2 class="sec">After you save — Load info &amp; fuel (sample walkthrough)</h2>
+      <p class="small dim" style="margin:0 2px 10px;line-height:1.55">This is the new post-save flow, walked end to end on one <strong style="color:var(--text)">fictional sample load</strong>. In the full app, saving a load opens its load panel straight away — no hunting back through the list — with the fuel call and the route right there. <strong style="color:var(--text)">Every name, address, time, and figure below is invented sample data for this preview.</strong> Nothing here is a real load, and nothing saves.</p>
+      <div class="flow-strip" aria-label="Post-save load flow steps" style="margin:0 2px 12px">
+        <span class="flow-step" style="background:linear-gradient(92deg,var(--neon-a),var(--neon-b));color:#04150c;border-color:transparent">1 · Add load</span><span class="flow-arrow">→</span>
+        <span class="flow-step">2 · Load info opens</span><span class="flow-arrow">→</span>
+        <span class="flow-step">3 · Fuel plan off your tank %</span><span class="flow-arrow">→</span>
+        <span class="flow-step">4 · Route with fuel in route</span><span class="flow-arrow">→</span>
+        <span class="flow-step">5 · Drive this route</span>
+      </div>
+
+      <div class="card" style="border-color:var(--neon-a)" aria-label="Load info panel — fictional sample load DEMO-417">
+        <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap">
+          <strong style="font-size:var(--fs-lg)">📦 Load info — Load #DEMO-417</strong>
+          <span class="stage-tag">SAMPLE LOAD · ALL FAKE</span>
+        </div>
+        <p class="xs dim" style="margin-top:4px;line-height:1.5">The panel that opens the second a load saves. Parties, full addresses, appointments, carrier, notes, and pay — one screen, no scrolling through the workspace to find it.</p>
+
+        <div class="xs" style="font-weight:800;letter-spacing:.08em;margin:14px 0 2px">SHIPPER — PICKUP</div>
+        <div>
+          <div class="kv-row"><span class="k"><strong style="color:var(--text)">Cedar Bluff Bottling Co.</strong> (fictional shipper)</span><span class="v">Shipper</span></div>
+          <div class="kv-row"><span class="k">Address</span><span class="v" style="text-align:right">1420 Industrial Park Drive<br />Knoxville, TN 37919</span></div>
+          <div class="kv-row"><span class="k">Pickup appointment</span><span class="v tnum">Wed, Dec 3, 2026 · 8:00 AM ET</span></div>
+        </div>
+
+        <div class="xs" style="font-weight:800;letter-spacing:.08em;margin:14px 0 2px">CONSIGNEE — DELIVERY</div>
+        <div>
+          <div class="kv-row"><span class="k"><strong style="color:var(--text)">Ozark Fresh Foods Distribution Center</strong> (fictional consignee)</span><span class="v">Consignee</span></div>
+          <div class="kv-row"><span class="k">Address</span><span class="v" style="text-align:right">2810 Commerce Way<br />Little Rock, AR 72204</span></div>
+          <div class="kv-row"><span class="k">Delivery appointment</span><span class="v tnum">Thu, Dec 4, 2026 · 9:00 AM CT</span></div>
+        </div>
+
+        <div class="xs" style="font-weight:800;letter-spacing:.08em;margin:14px 0 2px">LOAD DETAILS</div>
+        <div>
+          <div class="kv-row"><span class="k">Carrier</span><span class="v">Demo Carrier Lines LLC (fictional)</span></div>
+          <div class="kv-row"><span class="k">Freight · Weight · Trailer</span><span class="v">Bottled water, palletized · 38,500 lbs · 53′ dry van</span></div>
+          <div class="kv-row"><span class="k">Lane · Distance (sample)</span><span class="v tnum">Knoxville, TN → Little Rock, AR · 486 mi via I-40 W</span></div>
+        </div>
+        <div class="card2" style="margin-top:10px" aria-label="Load notes — sample">
+          <div class="xs" style="font-weight:800;letter-spacing:.08em">LOAD NOTES (SAMPLE)</div>
+          <p class="small dim" style="margin-top:4px;line-height:1.55">Check in at Gate 2 with the load number. Dock doors 4–6. Lumper fee pre-approved on this sample load. No overnight parking at either end — stage at the fuel stop if you arrive early. Call dispatch if running more than 30 minutes late so the delivery appointment can be re-booked.</p>
+        </div>
+
+        <div class="xs" style="font-weight:800;letter-spacing:.08em;margin:14px 0 2px">PAY — GROSS AND YOUR CUT (SAMPLE FIGURES)</div>
+        <div>
+          <div class="kv-row"><span class="k">Load gross (sample)</span><span class="v tnum">$1,875.00</span></div>
+          <div class="kv-row"><span class="k">Your pay model — % of gross (sample setting)</span><span class="v tnum">75%</span></div>
+          <div class="kv-row"><span class="k"><strong style="color:var(--text)">Your cut — 75% of $1,875.00</strong></span><span class="v tnum ok">$1,406.25</span></div>
+        </div>
+        <p class="xs dim" style="margin-top:6px;line-height:1.5">Pay figures from the load panel itself — gross up top, your percentage cut under it. The 75% above is a generic sample setting only; in the full app your own saved pay model drives this line. Sample figures only — nothing pays or saves in this preview.</p>
+      </div>
+
+      <div class="card" aria-label="Fuel suggestion card — driven by tank percent, sample">
+        <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap">
+          <strong style="font-size:var(--fs-lg)">⛽ Fuel plan — off your tank %</strong>
+          <span class="stage-tag">SAMPLE · TRY IT</span>
+        </div>
+        <p class="small dim" style="margin-top:6px;line-height:1.55">Same panel, right under the load info: tell it what's in the tank and it does the trip math — gallons on board, what this run needs, whether you make it, and where to stop. Drag the tank level and watch the call change. Sample truck: <strong style="color:var(--text)">150-gal tank · 6.8 MPG</strong> · Sample trip: <strong style="color:var(--text)">486 mi</strong>.</p>
+        <label class="xs dim" for="lfTank" style="display:block;margin-top:12px;font-weight:700">Your tank right now — <span id="lfPctOut" class="tnum" style="color:var(--text);font-weight:800">38%</span></label>
+        <input type="range" id="lfTank" min="5" max="100" step="1" value="38" aria-label="Current tank percent — sample, drag to change the fuel call" />
+        <div class="pbar" aria-hidden="true"><div id="lfBar" style="width:38%"></div></div>
+        <div style="margin-top:10px">
+          <div class="kv-row"><span class="k">On board now — tank % × 150 gal</span><span class="v tnum" id="lfOnBoard">57.0 gal</span></div>
+          <div class="kv-row"><span class="k">Trip needs — 486 mi ÷ 6.8 MPG</span><span class="v tnum" id="lfTripGal">71.5 gal</span></div>
+          <div class="kv-row"><span class="k">Range on what's in the tank</span><span class="v tnum" id="lfRange">388 mi</span></div>
+          <div class="kv-row"><span class="k"><strong style="color:var(--text)">Buy on this trip</strong> — trip + 15 gal reserve, rounded up</span><span class="v tnum" id="lfBuy">30 gal</span></div>
+        </div>
+        <div class="card2" style="margin-top:10px" aria-label="Suggested fuel stop — sample">
+          <div class="xs" style="font-weight:800;letter-spacing:.08em">SUGGESTED FUEL STOP (SAMPLE)</div>
+          <p class="small" style="margin-top:4px;line-height:1.55" id="lfVerdict"><strong>You don't make it on this tank</strong> — 388 mi of range against a 486 mi run.</p>
+          <p class="small dim" style="margin-top:4px;line-height:1.55" id="lfStopNote">Stop at <strong style="color:var(--text)">Demo Travel Plaza — I-40, Exit 82, Jackson, TN</strong> (fictional sample stop), mile 212 of the run, and buy <strong style="color:var(--text)" id="lfStopBuy">30 gal</strong> — you roll into Little Rock with the 15-gal reserve still in the tank. The stop is already placed on the route below.</p>
+        </div>
+        <p class="xs dim" style="margin-top:8px;line-height:1.5">If the app doesn't know your level, it asks right here on this panel and remembers it for the next load. Sample math only — an estimate for planning; your fuel log stays the record.</p>
+      </div>
+
+      <div class="card" aria-label="Routed view of the sample load with fuel stops on the route">
+        <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap">
+          <strong style="font-size:var(--fs-lg)">🗺️ Route — Load #DEMO-417, fuel in route</strong>
+          <span class="stage-tag">SAMPLE ROUTE</span>
+        </div>
+        <p class="small dim" style="margin-top:6px;line-height:1.55">One tap on <strong style="color:var(--text)">Route load</strong> routes it with the fuel stops placed on the route — pickup, the suggested fuel stop, and delivery, in order. Pick the route and roll.</p>
+        <div class="mapwrap night" style="margin-top:12px" aria-label="Sample routed map — Knoxville to Little Rock via I-40 West with the suggested fuel stop placed on the route at Jackson, Tennessee">
+          <svg viewBox="0 0 520 240" role="img" aria-label="Stylized sample route map with fuel stop on the route">
+            <rect width="520" height="240" fill="#0d1417"/>
+            <g stroke="#1d2a2e" stroke-width="10"><path d="M-10 60 H530"/><path d="M-10 130 H530"/><path d="M-10 200 H530"/><path d="M80 -10 V250"/><path d="M210 -10 V250"/><path d="M340 -10 V250"/><path d="M450 -10 V250"/></g>
+            <g stroke="#141e21" stroke-width="4"><path d="M-10 95 H530"/><path d="M-10 165 H530"/><path d="M145 -10 V250"/><path d="M275 -10 V250"/><path d="M395 -10 V250"/></g>
+            <path class="route-glow" d="M462 52 C380 78 330 96 262 118 C190 141 120 162 48 196" fill="none" stroke-width="11" stroke-linecap="round"/>
+            <path class="route-line" d="M462 52 C380 78 330 96 262 118 C190 141 120 162 48 196" fill="none" stroke-width="4" stroke-linecap="round"/>
+            <path class="route-flow" d="M462 52 C380 78 330 96 262 118 C190 141 120 162 48 196" fill="none" stroke="#eafffa" stroke-width="2" stroke-linecap="round"/>
+            <g transform="translate(262 118)"><circle r="12" fill="#101613" stroke="#f5b301" stroke-width="1.5"/><text y="4" text-anchor="middle" font-size="12">⛽</text></g>
+            <circle cx="462" cy="52" r="7" fill="#3ddc84" stroke="#04150c" stroke-width="2"/>
+            <circle cx="48" cy="196" r="7" fill="#f5b301" stroke="#101613" stroke-width="2"/>
+            <text x="392" y="34" fill="#9aa3a7" font-size="11" font-weight="700">KNOXVILLE, TN</text>
+            <text x="196" y="98" fill="#f5b301" font-size="10" font-weight="700">⛽ JACKSON, TN · MI 212</text>
+            <text x="22" y="222" fill="#9aa3a7" font-size="11" font-weight="700">LITTLE ROCK, AR →</text>
+            <text x="300" y="150" fill="#5b6a6e" font-size="10" font-weight="700">I-40 W · 486 MI</text>
+          </svg>
+          <span class="map-badge">SAMPLE ROUTE · FUEL IN ROUTE</span>
+        </div>
+        <div style="margin-top:10px">
+          <div class="aa-stop"><span class="aa-ic">📦</span><div class="aa-main"><div class="aa-kind">PICKUP · START OF ROUTE</div><div class="aa-name">Cedar Bluff Bottling Co. — Knoxville, TN</div><div class="aa-detail">Wed, Dec 3 · 8:00 AM ET appointment · <strong>486 mi</strong> to delivery</div></div></div>
+          <div class="aa-stop"><span class="aa-ic">⛽</span><div class="aa-main"><div class="aa-kind">FUEL STOP · PLACED ON THE ROUTE</div><div class="aa-name">Demo Travel Plaza — I-40, Exit 82, Jackson, TN (sample)</div><div class="aa-detail">Mile <strong>212</strong> of 486 · Buy <strong id="lfRouteBuy">30 gal</strong> per the fuel plan above · Truck parking + showers (sample amenities)</div></div><span class="best-tag">SUGGESTED</span></div>
+          <div class="aa-stop"><span class="aa-ic">🏁</span><div class="aa-main"><div class="aa-kind">DELIVERY · END OF ROUTE</div><div class="aa-name">Ozark Fresh Foods DC — Little Rock, AR</div><div class="aa-detail">Thu, Dec 4 · 9:00 AM CT appointment · ETA on this route <strong>8:12 AM CT</strong> (sample) · Arrives with the 15-gal reserve in the tank</div></div></div>
+        </div>
+        <div class="route-stats" aria-label="Sample route totals">
+          <div class="st"><div class="v tnum">486 mi</div><div class="xs dim">Total route</div></div>
+          <div class="st"><div class="v tnum">7h 24m</div><div class="xs dim">Drive time (sample)</div></div>
+          <div class="st"><div class="v tnum">1 stop</div><div class="xs dim">Fuel stop in route</div></div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+          <button class="btn-neon" style="flex:1;padding:13px;min-width:150px" data-toast="Demo: this is the picked route for sample Load #DEMO-417 — in the full app, Drive hands it to the GPS with the fuel stop as a waypoint. Nothing routes or saves in this preview.">▶ Drive this route (demo)</button>
+          <button class="btn-ghost" style="flex:1;padding:13px;min-width:150px" data-toast="Demo: re-routing re-runs the fuel plan against your current tank % and re-places the stops. Nothing routes or saves in this preview.">↻ Re-route with fuel (demo)</button>
+        </div>
+        <p class="xs dim" style="margin-top:8px;line-height:1.5">Sample walkthrough only — fictional load, fictional stops, sample times. In the full app this whole chain runs off the load you just saved: save → load info → fuel off your tank % → route with fuel in route → drive.</p>
+      </div>
+      <script>
+      (function(){
+        var range = document.getElementById("lfTank");
+        if (!range) return;
+        var pctOut = document.getElementById("lfPctOut"), bar = document.getElementById("lfBar"),
+            onBoard = document.getElementById("lfOnBoard"), rangeEl = document.getElementById("lfRange"),
+            buyEl = document.getElementById("lfBuy"), verdict = document.getElementById("lfVerdict"),
+            stopNote = document.getElementById("lfStopNote"), stopBuy = document.getElementById("lfStopBuy"),
+            routeBuy = document.getElementById("lfRouteBuy");
+        var TANK = 150, MPG = 6.8, TRIP = 486, RESERVE = 15;
+        var TRIPGAL = TRIP / MPG;
+        function fmt(n, d){ return n.toFixed(d == null ? 0 : d); }
+        function update(){
+          var pct = parseInt(range.value, 10) || 0;
+          var ob = pct / 100 * TANK;
+          var rng = Math.round(ob * MPG);
+          var buyRaw = TRIPGAL + RESERVE - ob;
+          var buy = buyRaw <= 0 ? 0 : Math.ceil(buyRaw / 5) * 5;
+          if (pctOut) pctOut.textContent = pct + "%";
+          if (bar) bar.style.width = pct + "%";
+          if (onBoard) onBoard.textContent = fmt(ob, 1) + " gal";
+          if (rangeEl) rangeEl.textContent = rng + " mi";
+          if (buyEl) buyEl.textContent = buy === 0 ? "0 gal — no stop needed" : buy + " gal";
+          if (stopBuy) stopBuy.textContent = buy + " gal";
+          if (routeBuy) routeBuy.textContent = buy === 0 ? "0 gal — no stop needed" : buy + " gal";
+          if (buy === 0) {
+            if (verdict) verdict.innerHTML = "<strong>You make it on this tank</strong> — " + rng + " mi of range against a " + TRIP + " mi run, with the reserve still in the tank at delivery.";
+            if (stopNote) stopNote.innerHTML = "No fuel stop is placed on this run at this tank level — the route below runs pickup to delivery direct. Drop the tank level and the suggested stop comes back.";
+          } else {
+            if (verdict) verdict.innerHTML = "<strong>You don't make it on this tank</strong> — " + rng + " mi of range against a " + TRIP + " mi run.";
+            if (stopNote) stopNote.innerHTML = "Stop at <strong style=\"color:var(--text)\">Demo Travel Plaza — I-40, Exit 82, Jackson, TN</strong> (fictional sample stop), mile 212 of the run, and buy <strong style=\"color:var(--text)\">" + buy + " gal</strong> — you roll into Little Rock with the 15-gal reserve still in the tank. The stop is already placed on the route below.";
+          }
+        }
+        range.addEventListener("input", update);
+        update();
+      })();
+      </script>
+
       <h2 class="sec">Worth-It Advisor — before you book (sample)</h2>
       <div class="card">
         <div style="display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap">
